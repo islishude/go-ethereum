@@ -68,7 +68,7 @@ var Defaults = Config{
 	RPCTxFeeCap:        1, // 1 ether
 }
 
-//go:generate go run github.com/fjl/gencodec -type Config -formats toml -out gen_config.go
+//go:generate go tool github.com/fjl/gencodec -type Config -formats toml -out gen_config.go
 
 // Config contains configuration options for ETH and LES protocols.
 type Config struct {

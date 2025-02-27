@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/math"
 )
 
-//go:generate go run github.com/fjl/gencodec -type Account -field-override accountMarshaling -out gen_account.go
+//go:generate go tool github.com/fjl/gencodec -type Account -field-override accountMarshaling -out gen_account.go
 
 // Account represents an Ethereum account and its attached data.
 // This type is used to specify accounts in the genesis block state, and

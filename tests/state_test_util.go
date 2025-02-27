@@ -84,7 +84,7 @@ type stPostState struct {
 	}
 }
 
-//go:generate go run github.com/fjl/gencodec -type stEnv -field-override stEnvMarshaling -out gen_stenv.go
+//go:generate go tool github.com/fjl/gencodec -type stEnv -field-override stEnvMarshaling -out gen_stenv.go
 
 type stEnv struct {
 	Coinbase      common.Address `json:"currentCoinbase"      gencodec:"required"`
@@ -108,7 +108,7 @@ type stEnvMarshaling struct {
 	ExcessBlobGas *math.HexOrDecimal64
 }
 
-//go:generate go run github.com/fjl/gencodec -type stTransaction -field-override stTransactionMarshaling -out gen_sttransaction.go
+//go:generate go tool github.com/fjl/gencodec -type stTransaction -field-override stTransactionMarshaling -out gen_sttransaction.go
 
 type stTransaction struct {
 	GasPrice             *big.Int            `json:"gasPrice"`
@@ -137,7 +137,7 @@ type stTransactionMarshaling struct {
 	BlobGasFeeCap        *math.HexOrDecimal256
 }
 
-//go:generate go run github.com/fjl/gencodec -type stAuthorization -field-override stAuthorizationMarshaling -out gen_stauthorization.go
+//go:generate go tool github.com/fjl/gencodec -type stAuthorization -field-override stAuthorizationMarshaling -out gen_stauthorization.go
 
 // Authorization is an authorization from an account to deploy code at it's address.
 type stAuthorization struct {

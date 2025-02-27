@@ -34,7 +34,7 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 )
 
-//go:generate go run github.com/fjl/gencodec -type account -field-override accountMarshaling -out gen_account_json.go
+//go:generate go tool github.com/fjl/gencodec -type account -field-override accountMarshaling -out gen_account_json.go
 
 func init() {
 	tracers.DefaultDirectory.Register("prestateTracer", newPrestateTracer, false)

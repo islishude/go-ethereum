@@ -27,7 +27,7 @@ import (
 	zrntcommon "github.com/protolambda/zrnt/eth2/beacon/common"
 )
 
-//go:generate go run github.com/fjl/gencodec -type Header -field-override headerMarshaling -out gen_header_json.go
+//go:generate go tool github.com/fjl/gencodec -type Header -field-override headerMarshaling -out gen_header_json.go
 
 const (
 	headerIndexSlot          = 8

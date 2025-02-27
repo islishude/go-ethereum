@@ -29,7 +29,7 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 )
 
-//go:generate go run github.com/fjl/gencodec -type callFrame -field-override callFrameMarshaling -out gen_callframe.go
+//go:generate go tool github.com/fjl/gencodec -type callFrame -field-override callFrameMarshaling -out gen_callframe.go
 
 // overrides for gencodec
 type callFrameMarshaling struct {

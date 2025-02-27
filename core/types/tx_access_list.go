@@ -24,7 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/rlp"
 )
 
-//go:generate go run github.com/fjl/gencodec -type AccessTuple -out gen_access_tuple.go
+//go:generate go tool github.com/fjl/gencodec -type AccessTuple -out gen_access_tuple.go
 
 // AccessList is an EIP-2930 access list.
 type AccessList []AccessTuple
