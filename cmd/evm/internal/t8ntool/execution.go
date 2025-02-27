@@ -48,7 +48,7 @@ type Prestate struct {
 	Pre types.GenesisAlloc `json:"pre"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type ExecutionResult -field-override executionResultMarshaling -out gen_execresult.go
+//go:generate go tool github.com/fjl/gencodec -type ExecutionResult -field-override executionResultMarshaling -out gen_execresult.go
 
 // ExecutionResult contains the execution status after running a state test, any
 // error that might have occurred and a dump of the final state if requested.
@@ -79,7 +79,7 @@ type ommer struct {
 	Address common.Address `json:"address"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type stEnv -field-override stEnvMarshaling -out gen_stenv.go
+//go:generate go tool github.com/fjl/gencodec -type stEnv -field-override stEnvMarshaling -out gen_stenv.go
 type stEnv struct {
 	Coinbase              common.Address                      `json:"currentCoinbase"   gencodec:"required"`
 	Difficulty            *big.Int                            `json:"currentDifficulty"`

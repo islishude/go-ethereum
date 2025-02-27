@@ -221,8 +221,7 @@ type Hooks struct {
 // for tracing and reporting.
 type BalanceChangeReason byte
 
-//go:generate go run golang.org/x/tools/cmd/stringer -type=BalanceChangeReason -trimprefix=BalanceChange -output gen_balance_change_reason_stringer.go
-
+//go:generate go tool golang.org/x/tools/cmd/stringer -type=BalanceChangeReason -trimprefix=BalanceChange -output gen_balance_change_reason_stringer.go
 const (
 	BalanceChangeUnspecified BalanceChangeReason = 0
 

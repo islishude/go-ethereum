@@ -164,7 +164,7 @@ func (sc *SyncCommittee) VerifySignature(signingRoot common.Hash, signature *Syn
 	return bls.FastAggregateVerify(keys, signingRoot[:], &sig)
 }
 
-//go:generate go run github.com/fjl/gencodec -type SyncAggregate -field-override syncAggregateMarshaling -out gen_syncaggregate_json.go
+//go:generate go tool github.com/fjl/gencodec -type SyncAggregate -field-override syncAggregateMarshaling -out gen_syncaggregate_json.go
 
 // SyncAggregate represents an aggregated BLS signature with Signers referring
 // to a subset of the corresponding sync committee.

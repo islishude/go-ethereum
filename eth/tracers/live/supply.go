@@ -45,7 +45,7 @@ type supplyInfoIssuance struct {
 	Withdrawals  *big.Int `json:"withdrawals,omitempty"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type supplyInfoIssuance -field-override supplyInfoIssuanceMarshaling -out gen_supplyinfoissuance.go
+//go:generate go tool github.com/fjl/gencodec -type supplyInfoIssuance -field-override supplyInfoIssuanceMarshaling -out gen_supplyinfoissuance.go
 type supplyInfoIssuanceMarshaling struct {
 	GenesisAlloc *hexutil.Big
 	Reward       *hexutil.Big
@@ -58,7 +58,7 @@ type supplyInfoBurn struct {
 	Misc    *big.Int `json:"misc,omitempty"`
 }
 
-//go:generate go run github.com/fjl/gencodec -type supplyInfoBurn -field-override supplyInfoBurnMarshaling -out gen_supplyinfoburn.go
+//go:generate go tool github.com/fjl/gencodec -type supplyInfoBurn -field-override supplyInfoBurnMarshaling -out gen_supplyinfoburn.go
 type supplyInfoBurnMarshaling struct {
 	EIP1559 *hexutil.Big
 	Blob    *hexutil.Big

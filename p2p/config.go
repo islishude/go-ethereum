@@ -28,7 +28,7 @@ import (
 	"github.com/ethereum/go-ethereum/p2p/netutil"
 )
 
-//go:generate go run github.com/fjl/gencodec -type Config -field-override configMarshaling -formats toml -out config_toml.go
+//go:generate go tool github.com/fjl/gencodec -type Config -field-override configMarshaling -formats toml -out config_toml.go
 
 // Config holds Server options.
 type Config struct {

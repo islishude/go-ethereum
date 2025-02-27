@@ -32,7 +32,7 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 )
 
-//go:generate go run github.com/fjl/gencodec -type callFrame -field-override callFrameMarshaling -out gen_callframe_json.go
+//go:generate go tool github.com/fjl/gencodec -type callFrame -field-override callFrameMarshaling -out gen_callframe_json.go
 
 func init() {
 	tracers.DefaultDirectory.Register("callTracer", newCallTracer, false)

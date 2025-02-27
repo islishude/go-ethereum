@@ -34,8 +34,8 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 )
 
-//go:generate go run github.com/fjl/gencodec -type flatCallAction -field-override flatCallActionMarshaling -out gen_flatcallaction_json.go
-//go:generate go run github.com/fjl/gencodec -type flatCallResult -field-override flatCallResultMarshaling -out gen_flatcallresult_json.go
+//go:generate go tool github.com/fjl/gencodec -type flatCallAction -field-override flatCallActionMarshaling -out gen_flatcallaction_json.go
+//go:generate go tool github.com/fjl/gencodec -type flatCallResult -field-override flatCallResultMarshaling -out gen_flatcallresult_json.go
 
 func init() {
 	tracers.DefaultDirectory.Register("flatCallTracer", newFlatCallTracer, false)

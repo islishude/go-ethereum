@@ -25,7 +25,7 @@ import (
 	"github.com/ethereum/go-ethereum/rlp"
 )
 
-//go:generate go run github.com/fjl/gencodec -type Withdrawal -field-override withdrawalMarshaling -out gen_withdrawal_json.go
+//go:generate go tool github.com/fjl/gencodec -type Withdrawal -field-override withdrawalMarshaling -out gen_withdrawal_json.go
 //go:generate go run ../../rlp/rlpgen -type Withdrawal -out gen_withdrawal_rlp.go
 
 // Withdrawal represents a validator withdrawal from the consensus layer.
